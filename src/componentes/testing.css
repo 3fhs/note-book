@@ -1,0 +1,349 @@
+.container {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("../image/back.avif");
+    color: white;
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
+}
+.head-title {
+    width: 100%;
+    text-align: center;
+    background-color: var(--main-color);
+    border-radius: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    position: relative;
+}
+.head-title::after,
+.head-title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+.head-title::after {
+    right: 10px;
+    transform: translateY(12px);
+}
+.head-title::before {
+    left: 10px;
+    transform: translateY(12px);
+}
+form , .post {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 30px;
+}
+.post {
+    padding-top: 20px;
+    border-top: 2px solid var(--btn-color);
+    border-bottom: 2px solid var(--btn-color);
+    margin: 0 40px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+form input , button {
+    width: 250px;
+    height: 50px;
+    background-color: var(--second-color);
+    color: var(--white-color);
+    padding: 10px;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #3b1547;
+    transition: 0.3s;
+    outline: none;
+}
+form input::placeholder , textarea::placeholder{
+    color: var(--white-color);
+}
+form input:focus {
+    border: 2px solid var(--btn-color);
+}
+form textarea {
+    background-color: var(--second-color);
+    padding: 20px;
+    color: var(--white-color);
+    font-size: 16px;
+    width: 80%;
+    border-radius: 12px;
+    outline: none;
+    border: 2px solid #3b1547;
+    transition: 0.3s;
+}
+form textarea:focus {
+    border: 2px solid var(--btn-color);}
+.btn-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+button {
+    width: 200px;
+    background-color: var(--btn-color);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--dark-color);
+    border-radius: 6px;
+}
+button:hover {
+    background-color: var(--btn-hov);
+    color: var(--white-color);
+    text-shadow: 0 0 4px var(--dark-color);
+}
+.info {
+    background-color: #6c4864e6;
+    width: 100%;
+    border-radius: 12px;
+    padding: 20px 0;
+    color: #fff;
+    overflow: hidden;
+}
+.info h2 , .info p {
+    text-align: center;
+    padding: 10px;
+}
+.info h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+.info p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+}
+/*lists*/
+.list-mission {
+    background-color: #3a1448d4;
+    padding: 10px 30px;
+    border-top: 2px solid #b39eb5;
+    border-bottom: 2px solid #b39eb5;
+    border-radius: 20px;
+    margin: 0 20px;
+}
+.list-mission h2 {
+    text-align: center;
+    background-color: var(--main-color);
+    border-radius: 60px;
+    padding: 10px 20px;
+    position: relative;
+    width: fit-content;
+    right: 50%;
+    transform: translatex(50%);
+    margin: 0;
+}
+.list-mission h2::after , .list-mission h2::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    top: 27px;
+}
+.list-mission h2::after {
+    left: -9px;
+}
+.list-mission h2::before {
+    right: -9px;
+}
+.listes {
+    list-style: none;
+    background-color: var(--main-color);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 200px;
+    counter-reset: my-counter; /*add number to after*/ 
+}
+.list {
+    background-color: #ededed;
+    color: black;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+.list .bi-caret-left-fill {
+    position: absolute;
+    left: -18px;
+    color: #ededed;
+    font-size: 30px;
+}
+.bi-x-diamond-fill , .bi-pencil-square {
+    font-size: 30px;
+    color: #ededed;
+    cursor: pointer;
+    height: 48px;
+}
+.bi-x-diamond-fill {
+    color: red;
+}
+.click-link {
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+.list-text {
+    background-color: rgb(104, 67, 97);
+    width: calc(100% - 170px);
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 48px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 20px;
+}
+.list-text::after {
+    counter-increment: my-counter;
+    content: "" counter(my-counter);
+    font-weight: bold;
+    position: absolute;
+    left: 0px;
+    width: 20px;
+    font-size: 20px;
+    background-color: #311442;
+    color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.sitting {
+    min-width: 150px;
+    background-color: #684361;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.mission-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s;
+    background-color: #684361;
+    border-radius: 6px;
+    color: white;
+    padding: 10px; /* ضف padding مع max-height صفر حتى لا يؤثر على الانتقال */
+    font-size: 16px;
+    font-weight: 400;
+    text-align: right;
+    width: 100%;
+  }
+  
+  .mission-details.open {
+    max-height: 500px; /* اختار قيمة مناسبة */
+    padding: 10px; /* padding عند الفتح */
+  }
+  .mission-details p {
+    padding: 10px;
+    overflow: auto;
+    font-size: 18px;
+  }
+  @media (max-width: 768px) {
+    .click-link {
+        flex-direction: column;
+    }
+    .list-text {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .list .bi-caret-left-fill {
+        top: calc(50% - 30px);
+    }
+  }
+  /* تخصيص الشريط الكامل */
+  ::-webkit-scrollbar {
+    width: 10px; /* عرض الشريط */
+  }
+  
+  /* تخصيص المؤشر (الجزء الذي يتحرك) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #684361; /* لون المؤشر */
+    border-radius: 6px; /* زاوية مستديرة */
+    border: 3px solid transparent; /* إضافة مساحة حول المؤشر */
+  }
+  
+  /* تخصيص الخلفية */
+  ::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* لون خلفية الشريط */
+    border-radius: 6px; /* زاوية مستديرة */
+  }
+  /*footer*/
+.footer {
+    display: flex;
+    width: 100%;
+    padding: 20px 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #62425d;
+    color: white;
+}
+
+.contact-me {
+    flex-basis: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.link {
+    cursor: pointer;
+}
+.link i {
+    font-size: 30px;
+    color: royalblue;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 29px;
+    width: 29px;
+}
+@media (max-width: 768px) {
+    .footer {
+        gap: 20px;
+    }
+    .contact-me {
+        width: 100%;
+        flex-basis: 100%;
+    }
+}
